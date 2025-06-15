@@ -1276,6 +1276,7 @@ class FirecrestTransport(BlockingTransport):
                 for filename in filenames:
                     localfile_path = os.path.join(localpath, rel_folder, filename)
                     remotefile_path = rm_parent_now.joinpath(filename)
+                    print("local", localfile_path, "destination", remotefile_path)
                     self.putfile(localfile_path, remotefile_path)
 
     def put(
